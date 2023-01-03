@@ -1,17 +1,27 @@
 
-# The insert() method inserts an element to the list at the specified index
+# The remove() method removes the first matching element (which is passed as an argument) from the list
 
-# create a list of vowels
-vowel = ['a', 'e', 'i', 'u']
+# animals list
+animals = ['cat', 'dog', 'rabbit', 'pig']
 
-# 'o' is inserted at index 3 (4th position)
-vowel.insert(3, 'o')
-
-print('vowel are = ', vowel)
-
-# Output: vowel are =  ['a', 'e', 'i', 'o', 'u']
+# 'rabbit' is removed
+animals.remove('rabbit')
 
 
+# Updated animals List
+print('Updated animals list: ', animals)
+# O/P : Updated animals list:  ['cat', 'dog', 'guinea pig']
+
+# list contains duplicate elements, the remove() method only removes the first matching element
+animals1 = ['cat', 'dog', 'dog', 'guinea pig', 'dog']
+
+# 'dog' is removed
+animals1.remove('dog')
+
+
+# Updated animals list
+print('Updated animals1 list: ', animals1)
+# O/P : Updated animals1 list:  ['cat', 'dog', 'guinea pig', 'dog']
 
 
 
