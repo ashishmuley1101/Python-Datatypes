@@ -1,20 +1,14 @@
 
-# Using random module and its functions over a list
+# Creating python list
 
-import random
+# A list with 3 integers items single data type
+numbers = [1, 2, 5]
+print(numbers)
 
-print(random.randrange(10, 20)) # random number between 10-20 range
+# empty list
+my_list = []
+print(my_list)
 
-list1 = ['a', 'b', 'c', 'd', 'e']
-
-# get random item from list1
-print(random.choice(list1))
-
-# Shuffle list1
-random.shuffle(list1)
-
-# Print the shuffled list1
-print(list1)
-
-# Print random element from 0 to infinity range
-print(random.random())
+# list with mixed data types
+my_list = [1, "Hello", 3.4]
+print(my_list)
