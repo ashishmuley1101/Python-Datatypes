@@ -1,34 +1,36 @@
 
-# The reverse() method reverses the elements of the list.
+# The sort() method sorts the items of a list in ascending or descending order.
 
-# create a list of prime numbers
-prime_numbers = [2, 3, 5, 7]
+prime_numbers = [11, 3, 7, 5, 2]
 
-print("Before reverse:",prime_numbers)
-# O/P : Before reverse: [2, 3, 5, 7]
+# sorting the list in ascending order
+prime_numbers.sort()
 
-# reverse the order of list elements
-prime_numbers.reverse()
+print(prime_numbers)
+# Output: [2, 3, 5, 7, 11]
 
-print('Reversed List:', prime_numbers)
-# Output: Reversed List: [7, 5, 3, 2]
+# vowels list
+vowels = ['e', 'a', 'u', 'o', 'i']
 
-# -------Reverse a List Using Slicing Operator--------------------
+# sort the vowels
+vowels.sort()
 
-# Operating System List
-systems = ['Windows', 'macOS', 'Linux']
-print('Original List:', systems)
+# print vowels
+print('Sorted list:', vowels)
+# Output: Sorted list: ['a', 'e', 'i', 'o', 'u']
+#--------------------------------------------------
 
-# Reversing a list
-# ***** Syntax: reversed_list = systems[start:stop:step] ******
-reversed_list = systems[::-1] # :-1 is the index
+# vowels list
+vowels1 = ['e', 'a', 'u', 'o', 'i']
 
-# updated list
-print('Updated List:', reversed_list)
+# sort the vowels in Descending using sort(reverse=True)
+vowels1.sort(reverse=True)
 
-# O/P :
-# Original List: ['Windows', 'macOS', 'Linux']
-# Updated List: ['Linux', 'macOS', 'Windows']
+# print vowels
+print('Sorted list (in Descending):', vowels1)
+# Output: Sorted list (in Descending): ['u', 'o', 'i', 'e', 'a']
+
+
 
 
 
