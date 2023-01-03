@@ -1,35 +1,33 @@
 
-# The sort() method sorts the items of a list in ascending or descending order.
+# The copy() method returns a shallow copy of the list.
 
-prime_numbers = [11, 3, 7, 5, 2]
+# mixed list
+prime_numbers = [2, 3, 5]
 
-# sorting the list in ascending order
-prime_numbers.sort()
+# copying a list
+numbers = prime_numbers.copy()
 
-print(prime_numbers)
-# Output: [2, 3, 5, 7, 11]
+print('Copied List:', numbers)
+# Output: Copied List: [2, 3, 5]
 
-# vowels list
-vowels = ['e', 'a', 'u', 'o', 'i']
+# ---------shallow copy using the slicing syntax-----------
+# copy() in new list not changing old list
 
-# sort the vowels
-vowels.sort()
+# mixed list
+list = ['cat', 0, 6.7]
 
-# print vowels
-print('Sorted list:', vowels)
-# Output: Sorted list: ['a', 'e', 'i', 'o', 'u']
-#--------------------------------------------------
+# copying a list using slicing
+new_list = list[:]
 
-# vowels list
-vowels1 = ['e', 'a', 'u', 'o', 'i']
+# Adding an element to the new list
+new_list.append('dog')
 
-# sort the vowels in Descending using sort(reverse=True)
-vowels1.sort(reverse=True)
-
-# print vowels
-print('Sorted list (in Descending):', vowels1)
-# Output: Sorted list (in Descending): ['u', 'o', 'i', 'e', 'a']
-
+# Printing new and old list
+print('Old List:', list)
+print('New List:', new_list)
+# Output :
+# Old List: ['cat', 0, 6.7]
+# New List: ['cat', 0, 6.7, 'dog']
 
 
 
