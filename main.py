@@ -1,45 +1,34 @@
 
-# The pop() method removes the item at the given index from the list and returns the removed item.
+# The reverse() method reverses the elements of the list.
 
-animals1 = ['cat', 'dog', 'dog', 'pig', 'dog', 'goat', 'rabbit']
+# create a list of prime numbers
+prime_numbers = [2, 3, 5, 7]
 
-pop_element = animals1.pop(2)
+print("Before reverse:",prime_numbers)
+# O/P : Before reverse: [2, 3, 5, 7]
 
-print('Removed Element:', pop_element)
-print('Updated List:', animals1)
-# Output:
-# Removed Element: dog
-# Updated List: ['cat', 'dog', 'pig', 'dog']
+# reverse the order of list elements
+prime_numbers.reverse()
 
-# ----------pop() without an index, and for negative indices--------
+print('Reversed List:', prime_numbers)
+# Output: Reversed List: [7, 5, 3, 2]
 
-# remove and return the last item
-print('\nWhen index is not passed:')
-print('Return Value:', animals1.pop())
-print('Updated List:', animals1)
+# -------Reverse a List Using Slicing Operator--------------------
+
+# Operating System List
+systems = ['Windows', 'macOS', 'Linux']
+print('Original List:', systems)
+
+# Reversing a list
+# ***** Syntax: reversed_list = systems[start:stop:step] ******
+reversed_list = systems[::-1] # :-1 is the index
+
+# updated list
+print('Updated List:', reversed_list)
+
 # O/P :
-# When index is not passed:
-# Return Value: rabbit
-# Updated List: ['cat', 'dog', 'pig', 'dog', 'goat']
-
-# remove and return the last item
-print('\nWhen -1 is passed:')
-print('Return Value:', animals1.pop(-1))
-print('Updated List:', animals1)
-# O/P :
-# When -1 is passed:
-# Return Value: goat
-# Updated List: ['cat', 'dog', 'pig', 'dog']
-
-# remove and return the third last item
-print('\nWhen -3 is passed:')
-print('Return Value:', animals1.pop(-3))
-print('Updated List:', animals1)
-# O/P :
-# When -3 is passed:
-# Return Value: dog
-# Updated List: ['cat', 'pig', 'dog']
-
+# Original List: ['Windows', 'macOS', 'Linux']
+# Updated List: ['Linux', 'macOS', 'Windows']
 
 
 
