@@ -11,7 +11,7 @@ print('Updated List:', animals1)
 # Removed Element: dog
 # Updated List: ['cat', 'dog', 'pig', 'dog']
 
-# ----------pop() without an index, and for negative indices----------
+# ----------pop() without an index, and for negative indices--------
 
 # remove and return the last item
 print('\nWhen index is not passed:')
