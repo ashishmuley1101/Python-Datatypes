@@ -1,21 +1,20 @@
 
-# Conversion numbers data type in Python
+# Using random module and its functions over a list
 
-#   implicit conversion (automatically by interpreter)--------------------
+import random
 
-num1 = 5 # int data type
-num2 = 2.5 # float data types
-num3 = num1 + num2 # float data types ---> implicit conversion (automatically by interpreter)
-print(num3, 'is of type', type(num3)) # type() return float data type
+print(random.randrange(10, 20)) # random number between 10-20 range
 
-# -----------------------------------------------------------------------
+list1 = ['a', 'b', 'c', 'd', 'e']
 
-#--------------------------------explicit conversion -------------------
+# get random item from list1
+print(random.choice(list1))
 
-num4 = 5.42 # float data types
-num5 = int(num4) # int data types ---> explicit conversion(Type caste)
-print(num5, 'is of type', type(num5)) # type() return int data type
+# Shuffle list1
+random.shuffle(list1)
 
-num6 = '8+2j' # string data types
-num7 = complex(num6) # complex data types ---> explicit conversion(Type caste)
-print(num7, 'is of type', type(num7)) # type() return complex data type
+# Print the shuffled list1
+print(list1)
+
+# Print random element from 0 to infinity range
+print(random.random())
