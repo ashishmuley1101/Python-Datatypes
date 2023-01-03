@@ -1,11 +1,21 @@
 
-# Python Numeric Data Type
+# Conversion numbers data type in Python
 
-num1 = 5
-print(num1, 'is of type', type(num1)) # type() return int data type
+#   implicit conversion (automatically by interpreter)--------------------
 
-num2 = 5.42
-print(num2, 'is of type', type(num2)) # type() return float data type
+num1 = 5 # int data type
+num2 = 2.5 # float data types
+num3 = num1 + num2 # float data types ---> implicit conversion (automatically by interpreter)
+print(num3, 'is of type', type(num3)) # type() return float data type
 
-num3 = 8+2j
-print(num3, 'is of type', type(num3)) # type() return complex data type
+# -----------------------------------------------------------------------
+
+#--------------------------------explicit conversion -------------------
+
+num4 = 5.42 # float data types
+num5 = int(num4) # int data types ---> explicit conversion(Type caste)
+print(num5, 'is of type', type(num5)) # type() return int data type
+
+num6 = '8+2j' # string data types
+num7 = complex(num6) # complex data types ---> explicit conversion(Type caste)
+print(num7, 'is of type', type(num7)) # type() return complex data type
