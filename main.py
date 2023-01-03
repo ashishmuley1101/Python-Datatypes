@@ -1,32 +1,26 @@
 
-# Python list extend() method
+# The index() method returns the index of the specified element in the list
 
-# extend() joining two list in single list
-# add items of a list (rather than the list itself) to another list, use the extend() method.
+# alphabets list
+alphabets = ['a', 'e', 'i', 'o', 'g', 'l', 'i', 'u']
 
-# ------------------append() adding two list------------------------------------
+# index of 'i' in alphabets
+index = alphabets.index('e')   # O/P : 1
 
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
+print('The index of e:', index)
 
-print("Before append = ", list1)  # O/P : Before append =  [1, 2, 3]
+# 'i' after the 4th index is searched
+index = alphabets.index('i', 4)    # O/P : 6
 
-list1.append(list2)
+print('The index of i:', index)
 
-print("After append = ", list1)  # O/P : After append =  [1, 2, 3, [4, 5, 6]]
+# 'i' between 3rd and 5th index is searched
+# index = alphabets.index('i', 3, 5)   # O/P : Error!
 
-#-------------------------------------------------------------------------------
+# 'i' between 3rd and 7th index is searched
+index = alphabets.index('i', 3, 7)
 
-# To overcome the append() adding two list we use extends()
-
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
-
-print("Before extend = ", list1)  # O/P : Before append =  [1, 2, 3]
-
-list1.extend(list2)
-
-print("After extend = ", list1)  # O/P : After append =  [1, 2, 3, 4, 5, 6]
+print('The index of i:', index)   # O/P : 6
 
 
 
