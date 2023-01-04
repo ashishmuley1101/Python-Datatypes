@@ -1,23 +1,23 @@
 
-# Python String Upper method
+# Python String lower method
 
-# The upper() method converts all lowercase characters in a string into
-# uppercase characters and returns string. ------------------------
+# The lower() method converts all upper characters in a string into
+# lowercase characters and returns string. ------------------------
 
-message = 'hello, how are you ? '
+message = 'Hello, How Are You ? '
 
-# convert message to uppercase
-print(message.upper())
+# convert message to lowercase
+print(message.lower())
 
-# Output: HELLO, HOW ARE YOU ?
+# Output: hello, how are you ?
 
 # first string
-firstString = "python is awesome!"
+firstString = "Python Is Awesome!"
 
 # second string
 secondString = "PyThOn Is AwEsOmE!"
 
-if(firstString.upper() == secondString.upper()):
+if(firstString.lower() == secondString.lower()):
     print("The strings are same.")
 else:
     print("The strings are not same.")
