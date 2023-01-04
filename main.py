@@ -1,41 +1,48 @@
 
-# Python String format() method
+# Python String split() method
 
-# The syntax of the format() method is: template.format(p0, p1, ..., k0=v0, k1=v1, ...)
+# The split() method breaks up a string at the specified separator and returns a list of strings.
+# The syntax of split() is: str.split(separator, maxsplit)
+# separator (optional)- Delimiter at which splits occur. If not provided, the string is splitted at whitespaces.
+# maxsplit (optional) - Maximum number of splits. If not provided, there is no limit on the number of splits.
 
-# default arguments
-print("Hello {}, your balance is {}.".format("Adam", 230.2346))
+text = 'Python is a fun programming language'
 
-# positional arguments
-print("Hello {0}, your balance is {1}.".format("Adam", 230.2346))
+# split the text from space
+print(text.split(' '))
+# Output: ['Python', 'is', 'a', 'fun', 'programming', 'language']
 
-# keyword arguments
-print("Hello {name}, your balance is {blc}.".format(name="Adam", blc=230.2346))
+text1 = 'Love thy neighbor'
 
-# mixed arguments
-print("Hello {0}, your balance is {blc}.".format("Adam", blc=230.2346))
-# Output :
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
+# splits at space
+print(text1.split())  # O/p : ['Love', 'thy', 'neighbor']
 
-# --------Simple number formatting---------
+grocery = 'Milk, Chicken, Bread'
 
-# integer arguments
-print("The number is:{:d}".format(123))
+# splits at ','
+print(grocery.split(', '))  # O/p : ['Milk', 'Chicken', 'Bread']
 
-# float arguments
-print("The float number is:{:f}".format(123.4567898))
+# Splits at ':'
+print(grocery.split(':'))  # O/p : ['Milk, Chicken, Bread']
 
-# octal, binary and hexadecimal format
-print("bin: {0:b}, oct: {0:o}, hex: {0:x}".format(12))
 
-# Output :
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
-# Hello Adam, your balance is 230.2346.
+# ---------split() works when maxsplit is specified----------------
+
+grocery = 'Milk, Chicken, Bread, Butter'
+
+# maxsplit: 2
+print(grocery.split(', ', 2))  # O/p : ['Milk', 'Chicken', 'Bread, Butter']
+
+# maxsplit: 1
+print(grocery.split(', ', 1))  # O/p : ['Milk', 'Chicken, Bread, Butter']
+
+# maxsplit: 5
+print(grocery.split(', ', 5))  # O/p : ['Milk', 'Chicken', 'Bread', 'Butter']
+
+# maxsplit: 0
+print(grocery.split(', ', 0))  # O/p : ['Milk, Chicken, Bread, Butter']
+
+
 
 
 
