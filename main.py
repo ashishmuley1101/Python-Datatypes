@@ -1,47 +1,56 @@
 
-# Python String split() method
+# Python String encode() method
 
-# The split() method breaks up a string at the specified separator and returns a list of strings.
-# The syntax of split() is: str.split(separator, maxsplit)
-# separator (optional)- Delimiter at which splits occur. If not provided, the string is splitted at whitespaces.
-# maxsplit (optional) - Maximum number of splits. If not provided, there is no limit on the number of splits.
+# The encode() method returns an encoded version of the given string.
+# The syntax of encode() is: string.encode(encoding='UTF-8',errors='strict')
+# encoding - the encoding type a string has to be encoded to
+# errors - response when encoding fails.
 
-text = 'Python is a fun programming language'
+title = 'Python Programming'
 
-# split the text from space
-print(text.split(' '))
-# Output: ['Python', 'is', 'a', 'fun', 'programming', 'language']
+# change encoding to utf-8
+print(title.encode())
+# Output: b'Python Programming'
 
-text1 = 'Love thy neighbor'
+# -----Encode to Default Utf-8 Encoding---------------------
 
-# splits at space
-print(text1.split())  # O/p : ['Love', 'thy', 'neighbor']
+# unicode string
+string = 'pythön!'
 
-grocery = 'Milk, Chicken, Bread'
+# print string
+print('The string is:', string)
 
-# splits at ','
-print(grocery.split(', '))  # O/p : ['Milk', 'Chicken', 'Bread']
+# default encoding to utf-8
+string_utf = string.encode()
 
-# Splits at ':'
-print(grocery.split(':'))  # O/p : ['Milk, Chicken, Bread']
+# print result
+print('The encoded version is:', string_utf)
 
+# Output :
+# The string is: pythön!
+# The encoded version is: b'pyth\xc3\xb6n!'
 
-# ---------split() works when maxsplit is specified----------------
+# ---------Encoding with error parameter------------------
 
-grocery = 'Milk, Chicken, Bread, Butter'
+# unicode string
+string = 'pythön!'
 
-# maxsplit: 2
-print(grocery.split(', ', 2))  # O/p : ['Milk', 'Chicken', 'Bread, Butter']
+# print string
+print('The string is:', string)
 
-# maxsplit: 1
-print(grocery.split(', ', 1))  # O/p : ['Milk', 'Chicken, Bread, Butter']
+# ignore error
+print('The encoded version (with ignore) is:', string.encode("ascii", "ignore"))
 
-# maxsplit: 5
-print(grocery.split(', ', 5))  # O/p : ['Milk', 'Chicken', 'Bread', 'Butter']
+# replace error
+print('The encoded version (with replace) is:', string.encode("ascii", "replace"))
 
-# maxsplit: 0
-print(grocery.split(', ', 0))  # O/p : ['Milk, Chicken, Bread, Butter']
+# Output :
+# The string is: pythön!
+# The encoded version (with ignore) is: b'pythn!'
+# The encoded version (with replace) is: b'pyth?n!'
 
+# ignore - ignores the unencodable unicode from the result (error)
+# replace - replaces the unencodable unicode to a question mark ? (error)
 
 
 
