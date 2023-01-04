@@ -1,45 +1,43 @@
 
-# Access String datatype in Python
+# Python String Operations
 
-greet = 'hello'
+# 1. Compare Two Strings using == operator
 
-# access 1st index element
-print(greet[1])   # O/p : e
+str1 = "Hello, world!"
+str2 = "I love Python."
+str3 = "Hello, world!"
 
-# ------Negative Indexing-----
+# compare str1 and str2
+print(str1 == str2)  # O/p : False
 
-# access 4th last element
-print(greet[-2])  # O/p : l
+# compare str1 and str3
+print(str1 == str3)  # O/p : True
 
-# Access a range of characters in a string by using the slicing " : "
+# 2. Join(concatenate) Two or More Strings using " + " operator
 
-# access character from 1st index to 3rd index
-print(greet[1:4])  # O/p : ell
+str = "Hello, "
+name = "Ashish"
 
-# strings are immutable. That means the characters of a string cannot be changed
+# using " + " operator
+result = str + name
 
-message = 'Hello'
-# message[0] = 'Y'
-# print(message) # Error...! --> TypeError: 'str' object does not support item assignment
+print(result)
+# Output: Hello, Ashish
 
-# Assign the variable name(message) to a new string name variable
+# -----Iterate String through for loop------
+str1 = 'Hello'
 
-message = 'Hello Friends'
+# iterating through str1 string
+for letter in str1:
+    print(letter)
 
-# assign new string to message variable
-message = 'How are you ?'
+# ---The len() method to find the length of a string----
 
-print(message)   # O/p :  Hello Friends
+str2 = 'Ashish'
 
-#-------- Python Multiline String ----------
+# count length of str2 string
+print(len(str2))  # Output: 6
 
-# multiline string using  -- """ text """ ---
 
-message = """
-Never gonna give you up
-Never gonna let you down
-"""
-
-print(message)
 
 
