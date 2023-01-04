@@ -1,26 +1,22 @@
 
-# Python String lower method
+# Python String swapcase method
 
-# The lower() method converts all upper characters in a string into
-# lowercase characters and returns string. ------------------------
+# The swapcase() method returns the string by converting all the characters to their
+# opposite letter case( uppercase to lowercase and vice versa)
 
-message = 'Hello, How Are You ? '
+message = 'hELLO, hOW aRE yOU ? '
 
-# convert message to lowercase
-print(message.lower())
+# converts lowercase to uppercase and vice versa
+print(message.swapcase())
 
-# Output: hello, how are you ?
+# Output: Hello, How Are You ?
 
-# first string
-firstString = "Python Is Awesome!"
+name = "JoHn CeNa"
 
-# second string
-secondString = "PyThOn Is AwEsOmE!"
+# converts lowercase to uppercase and vice versa
+print(name.swapcase())
 
-if(firstString.lower() == secondString.lower()):
-    print("The strings are same.")
-else:
-    print("The strings are not same.")
+# Output: jOhN cEnA
 
 
 
