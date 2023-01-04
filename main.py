@@ -1,42 +1,29 @@
 
-# Python String Operations
+# Python String Upper method
 
-# 1. Compare Two Strings using == operator
+# The upper() method converts all lowercase characters in a string into
+# uppercase characters and returns string. ------------------------
 
-str1 = "Hello, world!"
-str2 = "I love Python."
-str3 = "Hello, world!"
+message = 'hello, how are you ? '
 
-# compare str1 and str2
-print(str1 == str2)  # O/p : False
+# convert message to uppercase
+print(message.upper())
 
-# compare str1 and str3
-print(str1 == str3)  # O/p : True
+# Output: HELLO, HOW ARE YOU ?
 
-# 2. Join(concatenate) Two or More Strings using " + " operator
+# first string
+firstString = "python is awesome!"
 
-str = "Hello, "
-name = "Ashish"
+# second string
+secondString = "PyThOn Is AwEsOmE!"
 
-# using " + " operator
-result = str + name
+if(firstString.upper() == secondString.upper()):
+    print("The strings are same.")
+else:
+    print("The strings are not same.")
 
-print(result)
-# Output: Hello, Ashish
 
-# -----Iterate String through for loop------
-str1 = 'Hello'
 
-# iterating through str1 string
-for letter in str1:
-    print(letter)
-
-# ---The len() method to find the length of a string----
-
-str2 = 'Ashish'
-
-# count length of str2 string
-print(len(str2))  # Output: 6
 
 
 
