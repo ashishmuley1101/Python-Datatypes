@@ -1,76 +1,41 @@
 
-# Python String endswith() method
+# Python String format() method
 
-# The endswith() method returns True if a string end with the
-# specified prefix(string). If not, it returns False
+# The syntax of the format() method is: template.format(p0, p1, ..., k0=v0, k1=v1, ...)
 
-# The syntax of endswith() is: str.endswith(suffix[, start[, end]])
-# start (optional) - Beginning position where prefix is to be checked within the string.
-# end (optional) - Ending position where prefix is to be checked within the string.
+# default arguments
+print("Hello {}, your balance is {}.".format("Adam", 230.2346))
 
-message = 'Python is fun'
+# positional arguments
+print("Hello {0}, your balance is {1}.".format("Adam", 230.2346))
 
-# check if the message ends with fun
-print(message.endswith('fun'))
+# keyword arguments
+print("Hello {name}, your balance is {blc}.".format(name="Adam", blc=230.2346))
 
-# Output: True
+# mixed arguments
+print("Hello {0}, your balance is {blc}.".format("Adam", blc=230.2346))
+# Output :
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
 
+# --------Simple number formatting---------
 
-# -----endswith() Without start and end Parameters---
-text = "Python is easy to learn."
+# integer arguments
+print("The number is:{:d}".format(123))
 
-result = text.endswith('to learn')
-# returns False
-print(result)
+# float arguments
+print("The float number is:{:f}".format(123.4567898))
 
-result = text.endswith('to learn.')
-# returns True
-print(result)
+# octal, binary and hexadecimal format
+print("bin: {0:b}, oct: {0:o}, hex: {0:x}".format(12))
 
-result = text.endswith('Python is easy to learn.')
-# returns True
-print(result)
-
-# -----endswith() With start and end Parameters-----
-
-text1 = "Python programming is easy to learn."
-
-# start parameter: 7
-# "programming is easy to learn." string is searched
-result = text1.endswith('learn.', 7)
-print(result)
-
-# Both start and end is provided
-# start: 7, end: 26
-# "programming is easy" string is searched
-
-result = text1.endswith('is', 7, 26)
-# Returns False
-print(result)
-
-result = text1.endswith('easy', 7, 26)
-# returns True
-print(result)
-
-# ------endswith() With Tuple Prefix--------------
-
-text = "programming is easy"
-result = text.endswith(('programming', 'python'))
-
-# prints False
-print(result)
-
-result = text.endswith(('python', 'easy', 'java'))
-
-#prints True
-print(result)
-
-# With start and end parameter
-# 'programming is' string is checked
-result = text.endswith(('is', 'an'), 0, 14)
-
-# prints True
-print(result)
+# Output :
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
+# Hello Adam, your balance is 230.2346.
 
 
 
